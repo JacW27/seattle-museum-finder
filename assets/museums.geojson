@@ -1,0 +1,412 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Burke Museum",
+        "website": "https://www.burkemuseum.org",
+        "source": "VisitSeattle / Burke Museum",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Wed-Sun), Closed Mon-Tue"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.310699, 47.66057]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Center for Wooden Boats",
+        "website": "https://www.cwb.org",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "12 PM - 5 PM (Daily)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.33650, 47.62638] 
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chihuly Garden and Glass",
+        "website": "https://www.chihulygardenandglass.com",
+        "source": "VisitSeattle / Chihuly Garden & Glass",
+        "category": "Museum",
+        "hours": "10 AM - 6 PM (Daily)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.35046, 47.62056]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Connections Museum (Telecom History)",
+        "website": "https://www.telcomhistory.org",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "11 AM - 5 PM (Wed-Sun), Closed Mon-Tue"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.32319, 47.54086]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Duwamish Longhouse & Cultural Center",
+        "website": "https://www.duwamishtribe.org",
+        "source": "VisitSeattle",
+        "category": "Cultural Center",
+        "hours": "10 AM - 5 PM (Tue-Sat), Closed Sun-Mon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.35203, 47.56091]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Frye Art Museum",
+        "website": "https://fryemuseum.org",
+        "source": "VisitSeattle / Frye Art Museum",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Tue-Sun), Closed Mon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.32415, 47.60720]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gates Foundation Discovery Center",
+        "website": "https://www.discovergates.org",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Tue-Sun), Closed Mon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.34690, 47.62278]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Henry Art Gallery",
+        "website": "https://henryart.org",
+        "source": "VisitSeattle / Henry Art Gallery",
+        "category": "Museum",
+        "hours": "10 AM - 4 PM (Tue-Sun), Closed Mon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.31172, 47.65628]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Holocaust Center for Humanity",
+        "website": "https://www.holocaustcenterseattle.org",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "12 PM - 5 PM (Fri-Sun), Closed Mon-Thu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.34293, 47.61224]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Klondike Gold Rush Museum (NPS - Seattle)",
+        "website": "https://www.nps.gov",
+        "source": "VisitSeattle / NPS",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Daily)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.331777, 47.59932]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Log House Museum",
+        "website": "https://www.loghousemuseum.org",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "12 PM - 4 PM (Fri-Sun), Closed Mon-Thu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.41096, 47.57764]
+      }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "name": "Museum of Flight",
+            "website": "https://www.museumofflight.org",
+            "source": "VisitSeattle / Museum of Flight",
+            "category": "Museum",
+            "hours": "10 AM - 5 PM (Daily)"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.29686, 47.51854]
+        }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Museum of History & Industry (MOHAI)",
+        "website": "https://mohai.org",
+        "source": "VisitSeattle / MOHAI",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Daily)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.33690, 47.62758]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Museum of Pop Culture (MoPOP)",
+        "website": "https://www.mopop.org",
+        "source": "VisitSeattle / MoPOP",
+        "category": "Museum",
+        "hours": "9 AM - 5 PM (Daily)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.34813, 47.62148]
+      }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "name": "Pacific Science Center",
+            "website": "https://www.pacificsciencecenter.org",
+            "source": "VisitSeattle / Pacific Science Center",
+            "category": "Museum",
+            "hours": "10 AM - 5 PM (Daily)"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.35156, 47.62004]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "name": "Seattle Children's Museum",
+            "website": "https://www.thechildrensmuseum.org",
+            "source": "VisitSeattle / Seattle Children's Museum",
+            "category": "Museum",
+            "hours": "10 AM - 5 PM (Tue-Sun), Closed Mon"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.35089, 47.62139]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "name": "Seattle Chinese Garden",
+            "website": "https://www.seattlechinesegarden.org",
+            "source": "VisitSeattle / Seattle Chinese Garden",
+            "category": "Garden",
+            "hours": "10 AM - 6 PM (Daily)"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.35250, 47.55177]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "name": "Seattle Museum of History & Industry (MOHAI)",
+            "website": "https://mohai.org",
+            "source": "VisitSeattle / MOHAI",
+            "category": "Museum",
+            "hours": "10 AM - 5 PM (Daily)"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.3365, 47.6205]
+        }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seattle Art Museum (SAM)",
+        "website": "https://www.seattleartmuseum.org",
+        "source": "VisitSeattle / SAM",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Tue-Sun), Closed Mon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.33796, 47.60752]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wing Luke Museum of the Asian Pacific American Experience",
+        "website": "https://www.wingluke.org",
+        "source": "VisitSeattle / Wing Luke Museum",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Tue-Sun), Closed Mon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.32291, 47.59822]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Woodland Park Zoo",
+        "website": "https://www.zoo.org",
+        "source": "VisitSeattle / Woodland Park Zoo",
+        "category": "Zoo",
+        "hours": "9:30 AM - 6 PM (Daily)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.35088, 47.66844]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ye Olde Curiosity Shop",
+        "website": "https://www.yeoldecursiosityshop.com",
+        "source": "VisitSeattle",
+        "category": "Shop",
+        "hours": "9 AM - 9 PM (Daily)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.33995, 47.60433]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The National Nordic Museum",
+        "website": "https://nordicmuseum.org/",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "10 AM - 6 PM (Tue-Sun), Closed Mon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.39251, 47.66842]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Northwest African American Museum",
+        "website": "https://www.naamnw.org/",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "12 PM - 6 PM (Tue-Sun), Closed Mon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.30194, 47.58915]
+      }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "name": "Sea Mar Museum of Chicano/a/Latino/a Culture",
+            "website": "https://seamarmuseum.org/",
+            "source": "VisitSeattle / NPS",
+            "category": "Museum",
+            "hours": "10 AM - 4 PM (Tue-Sun), Closed Mon"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.31548, 47.51645]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "name": "Seattle Asian Art Museum",
+            "website": "https://www.seattleartmuseum.org/visit/seattle-asian-art-museum",
+            "source": "VisitSeattle / NPS",
+            "category": "Museum",
+            "hours": "10 AM - 5 PM (Tue-Sun), Closed Mon"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.31440, 47.63023]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "name": "Olympic Sculpture Park",
+            "website": "https://www.seattleartmuseum.org/visit/olympic-sculpture-park",
+            "source": "VisitSeattle / NPS",
+            "category": "Park",
+            "hours": "24 Hours (Daily)"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.35532, 47.61661]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "name": "Seattle Aquarium",
+            "website": "https://www.seattleaquarium.org/",
+            "source": "VisitSeattle / MOHAI",
+            "category": "Aquarium",
+            "hours": "9:30 AM - 6 PM (Daily)"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.34296, 47.60740]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "name": "Seattle Pinball Museum",
+            "website": "https://www.seattlepinballmuseum.com/",
+            "source": "VisitSeattle / NPS",
+            "category": "Museum",
+            "hours": "11 AM - 10 PM (Daily)"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.32479, 47.59806]
+        }
+    }
+    ]
+}
+
