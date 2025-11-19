@@ -1,1 +1,464 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"Burke Museum","website":"https://www.burkemuseum.org","source":"VisitSeattle / Burke Museum","category":"Museum","hours":"10 AM - 5 PM (Wed-Sun), Closed Mon-Tue","image":"https://uploads.visitseattle.org/2020/09/16145634/Burke-Museum-webcrop-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.310699,47.66057]},"id":0},{"type":"Feature","properties":{"name":"Center for Wooden Boats","website":"https://www.cwb.org","source":"VisitSeattle","category":"Museum","hours":"12 PM - 5 PM (Daily)","image":"https://uploads.visitseattle.org/2020/09/16154938/cwb_web-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.3365,47.62638]},"id":1},{"type":"Feature","properties":{"name":"Chihuly Garden and Glass","website":"https://www.chihulygardenandglass.com","source":"VisitSeattle / Chihuly Garden & Glass","category":"Museum","hours":"10 AM - 6 PM (Daily)","image":"https://uploads.visitseattle.org/2015/03/27104156/WEB_Queen-Anne_courtesy-chihuly-garden-and-glass-%C2%A9-Chihuly-Studio_CROPPED-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.35046,47.62056]},"id":2},{"type":"Feature","properties":{"name":"Connections Museum (Telecom History)","website":"https://www.telcomhistory.org","source":"VisitSeattle","category":"Museum","hours":"11 AM - 5 PM (Wed-Sun), Closed Mon-Tue","image":"https://uploads.visitseattle.org/2023/02/23222150/The-Telecommunications-History-Group-The-Connections-Museum-Seattle-Equipment-Exhibits-Telephones-Wall-Phones-1-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.32319,47.54086]},"id":3},{"type":"Feature","properties":{"name":"Duwamish Longhouse & Cultural Center","website":"https://www.duwamishtribe.org","source":"VisitSeattle","category":"Cultural Center","hours":"10 AM - 5 PM (Tue-Sat), Closed Sun-Mon","image":"https://uploads.visitseattle.org/2021/06/02095006/Duwamish-Longhouse-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.35203,47.56091]},"id":4},{"type":"Feature","properties":{"name":"Gates Foundation Discovery Center","website":"https://www.discovergates.org","source":"VisitSeattle","category":"Museum","hours":"10 AM - 5 PM (Tue-Sun), Closed Mon","image":"https://uploads.visitseattle.org/2019/12/27142852/BH532918-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.3469,47.62278]},"id":6},{"type":"Feature","properties":{"name":"Henry Art Gallery","website":"https://henryart.org","source":"VisitSeattle / Henry Art Gallery","category":"Museum","hours":"10 AM - 4 PM (Tue-Sun), Closed Mon","image":"https://uploads.visitseattle.org/2020/03/26173942/Henry-Art-Gallery-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.31172,47.65628]},"id":6},{"type":"Feature","properties":{"name":"Holocaust Center for Humanity","website":"https://www.holocaustcenterseattle.org","source":"VisitSeattle","category":"Museum","hours":"12 PM - 5 PM (Fri-Sun), Closed Mon-Thu","image":"https://uploads.visitseattle.org/2021/06/02110825/Holocaust-Center-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.34293,47.61224]},"id":7},{"type":"Feature","properties":{"name":"Klondike Gold Rush Museum (NPS - Seattle)","website":"https://www.nps.gov","source":"VisitSeattle / NPS","category":"Museum","hours":"10 AM - 5 PM (Daily)","image":"https://uploads.visitseattle.org/2020/09/25101303/Klondike-NPS-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.331777,47.59932]},"id":8},{"type":"Feature","properties":{"name":"Log House Museum","website":"https://www.loghousemuseum.org","source":"VisitSeattle","category":"Museum","hours":"12 PM - 4 PM (Fri-Sun), Closed Mon-Thu","image":"https://uploads.visitseattle.org/2021/10/12192538/Log-house-Museum-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.41096,47.57764]},"id":10},{"type":"Feature","properties":{"name":"Museum of Flight","website":"https://www.museumofflight.org","source":"VisitSeattle / Museum of Flight","category":"Museum","hours":"10 AM - 5 PM (Daily)","image":"https://uploads.visitseattle.org/2020/09/16144406/MuseumofFlight_web-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.29686,47.51854]},"id":10},{"type":"Feature","properties":{"name":"Museum of History & Industry (MOHAI)","website":"https://mohai.org","source":"VisitSeattle / MOHAI","category":"Museum","hours":"10 AM - 5 PM (Daily)","image":"https://uploads.visitseattle.org/2018/01/22063508/T2Do_MOHAI_EdLaCasse-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.3369,47.62758]},"id":11},{"type":"Feature","properties":{"name":"Museum of Pop Culture (MoPOP)","website":"https://www.mopop.org","source":"VisitSeattle / MoPOP","category":"Museum","hours":"9 AM - 5 PM (Daily)","image":"https://uploads.visitseattle.org/2017/05/02075903/MoPOP_IGR-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.34813,47.62148]},"id":13},{"type":"Feature","properties":{"name":"Pacific Science Center","website":"https://www.pacificsciencecenter.org","source":"VisitSeattle / Pacific Science Center","category":"Museum","hours":"10 AM - 5 PM (Daily)","image":"https://uploads.visitseattle.org/2022/03/09132512/19_Pacific-Science-Center-e1646861524671-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.35156,47.62004]},"id":14},{"type":"Feature","properties":{"name":"Seattle Children's Museum","website":"https://www.thechildrensmuseum.org","source":"VisitSeattle / Seattle Children's Museum","category":"Museum","hours":"10 AM - 5 PM (Tue-Sun), Closed Mon","image":"https://uploads.visitseattle.org/2021/09/21182007/MuseumExteriorRendering-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.35089,47.62139]},"id":15},{"type":"Feature","properties":{"name":"Seattle Chinese Garden","website":"https://www.seattlechinesegarden.org","source":"VisitSeattle / Seattle Chinese Garden","category":"Garden","hours":"10 AM - 6 PM (Daily)","image":"https://img.atlasobscura.com/EbcxdZ8c_u5DsXh2wZ6kYTUwHEWiRU9REFi5FwvFMZI/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80MGYx/ZjZjOS1iODIxLTRj/YWQtYjg0NC03ZTQ3/YzJjMmY4M2RmNWE5/MjE1OTcwMDM3YmMy/ZjFfSU1HXzQxNzEu/anBlZw.jpg"},"geometry":{"type":"Point","coordinates":[-122.3525,47.55177]},"id":15},{"type":"Feature","properties":{"name":"Seattle Art Museum (SAM)","website":"https://www.seattleartmuseum.org","source":"VisitSeattle / SAM","category":"Museum","hours":"10 AM - 5 PM (Tue-Sun), Closed Mon","image":"https://uploads.visitseattle.org/2019/11/05152945/Middle-Fork_installation-view1_SMALLER-e1600105588646-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.33796,47.60752]},"id":16},{"type":"Feature","properties":{"name":"Wing Luke Museum of the Asian Pacific American Experience","website":"https://www.wingluke.org","source":"VisitSeattle / Wing Luke Museum","category":"Museum","hours":"10 AM - 5 PM (Tue-Sun), Closed Mon","image":"https://uploads.visitseattle.org/2019/01/28210924/Credit-Courtesy-Wing-Luke-Museum-Photographer-Lindsay-Kennedy-Photography-Scrim-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.32291,47.59822]},"id":17},{"type":"Feature","properties":{"name":"Woodland Park Zoo","website":"https://www.zoo.org","source":"VisitSeattle / Woodland Park Zoo","category":"Zoo","hours":"9:30 AM - 6 PM (Daily)","image":"https://uploads.visitseattle.org/2016/12/21042753/Ryan-Hawk-for-the-Woodland-Park-Zoo-940x625-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.35088,47.66844]},"id":18},{"type":"Feature","properties":{"name":"Ye Olde Curiosity Shop","website":"https://www.yeoldecursiosityshop.com","source":"VisitSeattle","category":"Shop","hours":"9 AM - 9 PM (Daily)","image":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Seattle_-_Curiosity_Shop_03.jpg/500px-Seattle_-_Curiosity_Shop_03.jpg"},"geometry":{"type":"Point","coordinates":[-122.33995,47.60433]},"id":19},{"type":"Feature","properties":{"name":"The National Nordic Museum","website":"https://nordicmuseum.org/","source":"VisitSeattle","category":"Museum","hours":"10 AM - 6 PM (Tue-Sun), Closed Mon","image":"https://uploads.visitseattle.org/2015/03/30161703/VS_OVG_WS2019_Ballard_Nordic-Museum_courtesy_web-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.39251,47.66842]},"id":20},{"type":"Feature","properties":{"name":"Northwest African American Museum","website":"https://www.naamnw.org/","source":"VisitSeattle","category":"Museum","hours":"12 PM - 6 PM (Tue-Sun), Closed Mon","image":"https://uploads.visitseattle.org/2022/02/10162836/58_courtesy-Northwest-African-American-Museum-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.30194,47.58915]},"id":21},{"type":"Feature","properties":{"name":"Sea Mar Museum of Chicano/a/Latino/a Culture","website":"https://seamarmuseum.org/","source":"VisitSeattle / NPS","category":"Museum","hours":"10 AM - 4 PM (Tue-Sun), Closed Mon","image":"https://uploads.visitseattle.org/2021/04/19092148/IKAP_helloterumi_OSP2-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.31548,47.51645]},"id":22},{"type":"Feature","properties":{"name":"Seattle Asian Art Museum","website":"https://www.seattleartmuseum.org/visit/seattle-asian-art-museum","source":"VisitSeattle / NPS","category":"Museum","hours":"10 AM - 5 PM (Tue-Sun), Closed Mon","image":"https://uploads.visitseattle.org/2021/04/01130627/aam-post-reno-pre-art-interiors-7533-1024x683-1-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.3144,47.63023]},"id":23},{"type":"Feature","properties":{"name":"Olympic Sculpture Park","website":"https://www.seattleartmuseum.org/visit/olympic-sculpture-park","source":"VisitSeattle / NPS","category":"Park","hours":"24 Hours (Daily)","image":"https://uploads.visitseattle.org/2021/04/19092148/IKAP_helloterumi_OSP2-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.35532,47.61661]},"id":25},{"type":"Feature","properties":{"name":"Seattle Aquarium","website":"https://www.seattleaquarium.org/","source":"VisitSeattle / MOHAI","category":"Aquarium","hours":"9:30 AM - 6 PM (Daily)","image":"https://uploads.visitseattle.org/2019/08/03120513/aquarium-kid-shoot-049_Smaller-1-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.34296,47.6074]},"id":26},{"type":"Feature","properties":{"name":"Seattle Pinball Museum","website":"https://www.seattlepinballmuseum.com/","source":"VisitSeattle / NPS","category":"Museum","hours":"11 AM - 10 PM (Daily)","image":"https://uploads.visitseattle.org/2016/12/21042422/seattle-pinball-museum-940x833-450x300.jpg"},"geometry":{"type":"Point","coordinates":[-122.32479,47.59806]},"id":26}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Burke Museum",
+        "address": "4300 15th Avenue NE, Seattle, WA 98105",
+        "website": "https://www.burkemuseum.org",
+        "source": "VisitSeattle / Burke Museum",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Wed-Sun), Closed Mon-Tue",
+        "image": "https://uploads.visitseattle.org/2020/09/16145634/Burke-Museum-webcrop-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.310699, 47.66057]
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Center for Wooden Boats",
+        "address": "1010 Valley Street, Seattle, WA 98109",
+        "website": "https://www.cwb.org",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "12 PM - 5 PM (Daily)",
+        "image": "https://uploads.visitseattle.org/2020/09/16154938/cwb_web-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.3365, 47.62638]
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chihuly Garden and Glass",
+        "address": "305 Harrison Street, Seattle, WA 98109",
+        "website": "https://www.chihulygardenandglass.com",
+        "source": "VisitSeattle / Chihuly Garden & Glass",
+        "category": "Museum",
+        "hours": "10 AM - 6 PM (Daily)",
+        "image": "https://uploads.visitseattle.org/2015/03/27104156/WEB_Queen-Anne_courtesy-chihuly-garden-and-glass-%C2%A9-Chihuly-Studio_CROPPED-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.35046, 47.62056]
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Connections Museum (Telecom History)",
+        "address": "220 2nd Avenue South, Seattle, WA 98104",
+        "website": "https://www.telcomhistory.org",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "11 AM - 5 PM (Wed-Sun), Closed Mon-Tue",
+        "image": "https://uploads.visitseattle.org/2023/02/23222150/The-Telecommunications-History-Group-The-Connections-Museum-Seattle-Equipment-Exhibits-Telephones-Wall-Phones-1-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.32319, 47.54086]
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Duwamish Longhouse & Cultural Center",
+        "address": "4705 West Seattle Drive SW, Seattle, WA 98116",
+        "website": "https://www.duwamishtribe.org",
+        "source": "VisitSeattle",
+        "category": "Cultural Center",
+        "hours": "10 AM - 5 PM (Tue-Sat), Closed Sun-Mon",
+        "image": "https://uploads.visitseattle.org/2021/06/02095006/Duwamish-Longhouse-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.35203, 47.56091]
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gates Foundation Discovery Center",
+        "address": "440 5th Avenue North, Seattle, WA 98109",
+        "website": "https://www.discovergates.org",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Tue-Sun), Closed Mon",
+        "image": "https://uploads.visitseattle.org/2019/12/27142852/BH532918-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.3469, 47.62278]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Henry Art Gallery",
+        "address": "4100 15th Avenue NE, Seattle, WA 98105",
+        "website": "https://henryart.org",
+        "source": "VisitSeattle / Henry Art Gallery",
+        "category": "Museum",
+        "hours": "10 AM - 4 PM (Tue-Sun), Closed Mon",
+        "image": "https://uploads.visitseattle.org/2020/03/26173942/Henry-Art-Gallery-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.31172, 47.65628]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Holocaust Center for Humanity",
+        "address": "2350 East Pine Street, Seattle, WA 98122",
+        "website": "https://www.holocaustcenterseattle.org",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "12 PM - 5 PM (Fri-Sun), Closed Mon-Thu",
+        "image": "https://uploads.visitseattle.org/2021/06/02110825/Holocaust-Center-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.34293, 47.61224]
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Klondike Gold Rush Museum (NPS - Seattle)",
+        "address": "319 2nd Avenue South, Seattle, WA 98104",
+        "website": "https://www.nps.gov",
+        "source": "VisitSeattle / NPS",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Daily)",
+        "image": "https://uploads.visitseattle.org/2020/09/25101303/Klondike-NPS-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.331777, 47.59932]
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Log House Museum",
+        "address": "3003 61st Street SW, Seattle, WA 98116",
+        "website": "https://www.loghousemuseum.org",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "12 PM - 4 PM (Fri-Sun), Closed Mon-Thu",
+        "image": "https://uploads.visitseattle.org/2021/10/12192538/Log-house-Museum-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.41096, 47.57764]
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Museum of Flight",
+        "address": "9404 East Marginal Way South, Seattle, WA 98108",
+        "website": "https://www.museumofflight.org",
+        "source": "VisitSeattle / Museum of Flight",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Daily)",
+        "image": "https://uploads.visitseattle.org/2020/09/16144406/MuseumofFlight_web-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.29686, 47.51854]
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Museum of History & Industry (MOHAI)",
+        "address": "860 Terry Avenue North, Seattle, WA 98109",
+        "website": "https://mohai.org",
+        "source": "VisitSeattle / MOHAI",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Daily)",
+        "image": "https://uploads.visitseattle.org/2018/01/22063508/T2Do_MOHAI_EdLaCasse-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.3369, 47.62758]
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Museum of Pop Culture (MoPOP)",
+        "address": "325 5th Avenue North, Seattle, WA 98109",
+        "website": "https://www.mopop.org",
+        "source": "VisitSeattle / MoPOP",
+        "category": "Museum",
+        "hours": "9 AM - 5 PM (Daily)",
+        "image": "https://uploads.visitseattle.org/2017/05/02075903/MoPOP_IGR-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.34813, 47.62148]
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pacific Science Center",
+        "address": "200 Sue Bird Ct N, Seattle, WA 98109",
+        "website": "https://www.pacificsciencecenter.org",
+        "source": "VisitSeattle / Pacific Science Center",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Daily)",
+        "image": "https://uploads.visitseattle.org/2022/03/09132512/19_Pacific-Science-Center-e1646861524671-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.35156, 47.62004]
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seattle Children's Museum",
+        "address": "305 Harrison Street, Seattle, WA 98109",
+        "website": "https://www.thechildrensmuseum.org",
+        "source": "VisitSeattle / Seattle Children's Museum",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Tue-Sun), Closed Mon",
+        "image": "https://uploads.visitseattle.org/2021/09/21182007/MuseumExteriorRendering-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.35089, 47.62139]
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seattle Chinese Garden",
+        "address": "6801 16th Avenue West, Seattle, WA 98119",
+        "website": "https://www.seattlechinesegarden.org",
+        "source": "VisitSeattle / Seattle Chinese Garden",
+        "category": "Garden",
+        "hours": "10 AM - 6 PM (Daily)",
+        "image": "https://img.atlasobscura.com/EbcxdZ8c_u5DsXh2wZ6kYTUwHEWiRU9REFi5FwvFMZI/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy80MGYx/ZjZjOS1iODIxLTRj/YWQtYjg0NC03ZTQ3/YzJjMmY4M2RmNWE5/MjE1OTcwMDM3YmMy/ZjFfSU1HXzQxNzEu/anBlZw.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.3525, 47.55177]
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seattle Art Museum (SAM)",
+        "address": "1300 1st Avenue, Seattle, WA 98101",
+        "website": "https://www.seattleartmuseum.org",
+        "source": "VisitSeattle / SAM",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Tue-Sun), Closed Mon",
+        "image": "https://uploads.visitseattle.org/2019/11/05152945/Middle-Fork_installation-view1_SMALLER-e1600105588646-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.33796, 47.60752]
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wing Luke Museum of the Asian Pacific American Experience",
+        "address": "407 7th Avenue South, Seattle, WA 98104",
+        "website": "https://www.wingluke.org",
+        "source": "VisitSeattle / Wing Luke Museum",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Tue-Sun), Closed Mon",
+        "image": "https://uploads.visitseattle.org/2019/01/28210924/Credit-Courtesy-Wing-Luke-Museum-Photographer-Lindsay-Kennedy-Photography-Scrim-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.32291, 47.59822]
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Woodland Park Zoo",
+        "address": "5500 Phinney Avenue North, Seattle, WA 98103",
+        "website": "https://www.zoo.org",
+        "source": "VisitSeattle / Woodland Park Zoo",
+        "category": "Zoo",
+        "hours": "9:30 AM - 6 PM (Daily)",
+        "image": "https://uploads.visitseattle.org/2016/12/21042753/Ryan-Hawk-for-the-Woodland-Park-Zoo-940x625-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.35088, 47.66844]
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ye Olde Curiosity Shop",
+        "address": "1001 Alaska Way, Seattle, WA 98104",
+        "website": "https://www.yeoldecursiosityshop.com",
+        "source": "VisitSeattle",
+        "category": "Shop",
+        "hours": "9 AM - 9 PM (Daily)",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Seattle_-_Curiosity_Shop_03.jpg/500px-Seattle_-_Curiosity_Shop_03.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.33995, 47.60433]
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The National Nordic Museum",
+        "address": "2655 Northwest Market Street, Seattle, WA 98107",
+        "website": "https://nordicmuseum.org/",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "10 AM - 6 PM (Tue-Sun), Closed Mon",
+        "image": "https://uploads.visitseattle.org/2015/03/30161703/VS_OVG_WS2019_Ballard_Nordic-Museum_courtesy_web-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.39251, 47.66842]
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Northwest African American Museum",
+        "address": "2300 South Washington Street, Seattle, WA 98144",
+        "website": "https://www.naamnw.org/",
+        "source": "VisitSeattle",
+        "category": "Museum",
+        "hours": "12 PM - 6 PM (Tue-Sun), Closed Mon",
+        "image": "https://uploads.visitseattle.org/2022/02/10162836/58_courtesy-Northwest-African-American-Museum-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.30194, 47.58915]
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sea Mar Museum of Chicano/a/Latino/a Culture",
+        "address": "9547 Rainier Avenue South, Seattle, WA 98118",
+        "website": "https://seamarmuseum.org/",
+        "source": "VisitSeattle / NPS",
+        "category": "Museum",
+        "hours": "10 AM - 4 PM (Tue-Sun), Closed Mon",
+        "image": "https://uploads.visitseattle.org/2021/04/19092148/IKAP_helloterumi_OSP2-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.31548, 47.51645]
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seattle Asian Art Museum",
+        "address": "1400 East Prospect Street, Seattle, WA 98112",
+        "website": "https://www.seattleartmuseum.org/visit/seattle-asian-art-museum",
+        "source": "VisitSeattle / NPS",
+        "category": "Museum",
+        "hours": "10 AM - 5 PM (Tue-Sun), Closed Mon",
+        "image": "https://uploads.visitseattle.org/2021/04/01130627/aam-post-reno-pre-art-interiors-7533-1024x683-1-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.3144, 47.63023]
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Olympic Sculpture Park",
+        "address": "2901 Western Avenue, Seattle, WA 98121",
+        "website": "https://www.seattleartmuseum.org/visit/olympic-sculpture-park",
+        "source": "VisitSeattle / NPS",
+        "category": "Park",
+        "hours": "24 Hours (Daily)",
+        "image": "https://uploads.visitseattle.org/2021/04/19092148/IKAP_helloterumi_OSP2-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.35532, 47.61661]
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seattle Aquarium",
+        "address": "1483 Alaskan Way, Pier 59, Seattle, WA 98101",
+        "website": "https://www.seattleaquarium.org/",
+        "source": "VisitSeattle / MOHAI",
+        "category": "Aquarium",
+        "hours": "9:30 AM - 6 PM (Daily)",
+        "image": "https://uploads.visitseattle.org/2019/08/03120513/aquarium-kid-shoot-049_Smaller-1-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.34296, 47.6074]
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seattle Pinball Museum",
+        "address": "508 Maynard Avenue South, Seattle, WA 98104",
+        "website": "https://www.seattlepinballmuseum.com/",
+        "source": "VisitSeattle / NPS",
+        "category": "Museum",
+        "hours": "11 AM - 10 PM (Daily)",
+        "image": "https://uploads.visitseattle.org/2016/12/21042422/seattle-pinball-museum-940x833-450x300.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.32479, 47.59806]
+      },
+      "id": 26
+    }
+  ]
+}

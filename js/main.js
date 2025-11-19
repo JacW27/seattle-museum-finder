@@ -102,7 +102,7 @@ map.on('mousemove', (e) => {
   }
 
   html += `
-    <p><strong>Address:</strong> ${props.address || "N/A"}</p>
+    <p><strong>Address:</strong> ${props.address}</p>
     <p>${props.description || ""}</p>
   `;
 
