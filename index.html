@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Museums & Parking — Map</title>
   <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+  <link href="https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css" rel="stylesheet"/>
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css">
   
@@ -20,32 +21,60 @@
     <a href="project_description.html">Project Description</a>
     <a href="team.html">Team</a>
   </div>
+
+  <!-- mapbox top-left buttons -->
+  <div class="absolute fl my24 mx24 py24 px24 bg-gray-faint round">
+    <form id="params">
+      <h4 class="txt-m txt-bold mb6">Choose a travel mode:</h4>
+      <div class="mb12 mr12 toggle-group align-center">
+        <label class="toggle-container">
+          <input name="profile" type="radio" value="walking" />
+          <div class="toggle toggle--active-null toggle--null">Walking</div>
+        </label>
+        <label class="toggle-container">
+          <input name="profile" type="radio" value="cycling" checked />
+          <div class="toggle toggle--active-null toggle--null">Cycling</div>
+        </label>
+        <label class="toggle-container">
+          <input name="profile" type="radio" value="driving" />
+          <div class="toggle toggle--active-null toggle--null">Driving</div>
+        </label>
+      </div>
+      <h4 class="txt-m txt-bold mb6">Choose a maximum duration:</h4>
+      <div class="mb12 mr12 toggle-group align-center">
+        <label class="toggle-container">
+          <input name="duration" type="radio" value="10" checked />
+          <div class="toggle toggle--active-null toggle--null">10 min</div>
+        </label>
+        <label class="toggle-container">
+          <input name="duration" type="radio" value="20" />
+          <div class="toggle toggle--active-null toggle--null">20 min</div>
+        </label>
+        <label class="toggle-container">
+          <input name="duration" type="radio" value="30" />
+          <div class="toggle toggle--active-null toggle--null">30 min</div>
+        </label>
+      </div>
+    </form>
+  </div>
+
   <div class="page-content">
     <h1>Seattle Museum Map</h1>
     <p>
       This page displays the basemap used for our Seattle Museum Finder project. Please use the top navigation bar to explore our exciting project!
     </p>
     <div id="map"></div>
+    <div class="map-overlay" id="museum-info" style="position:absolute; top:100px; right:40px; z-index:1000; display:block;">
+      <h2>Museum Information</h2>
+      <div id="museum-content">
+        <p>Hover over a museum!</p>
+      </div>
+    </div>
     <div class="info">Basemap Complete</div>
   </div>
+  
 
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-  <script>
-    // Mapbox Access Token
-    const MAPBOX_TOKEN = 'pk.eyJ1Ijoia2FpYmEyayIsImEiOiJjbWh0aXlybGowb3VvMmxvanBhaDB6YThlIn0.bbZi9GXBCsrDH2M4bUWFMQ';
-    // Style Reference for Custom Basemap
-    const STYLE_URL = 'mapbox://styles/kaiba2k/cmidh7iz4006w01sv5ccb81rj';
-
-    mapboxgl.accessToken = MAPBOX_TOKEN;
-
-    const map = new mapboxgl.Map({
-      container: 'map',
-      style: STYLE_URL,
-      center: [-122.335167, 47.608013], // Seattle center as a starting point
-      zoom: 12
-    });
-
-    map.addControl(new mapboxgl.NavigationControl());
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
