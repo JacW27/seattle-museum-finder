@@ -12,15 +12,16 @@ const map = new mapboxgl.Map({
 
 // Create constants to use in getIso()
 const urlBase = 'https://api.mapbox.com/isochrone/v1/mapbox/';
-const lon = -122.3328;
-const lat = 47.6061;
+let lon = -122.3328; // current origin longitude (mutable)
+let lat = 47.6061;   // current origin latitude (mutable)
 let profile = 'cycling'; // Set the default routing profile
 let minutes = 10; // Set the default duration
 
 // Create a function that sets up the Isochrone API query then makes an fetch call
-async function getIso() {
+// getIso: fetch isochrone for a given lon/lat (defaults to current `lon`/`lat`)
+async function getIso(lonArg = lon, latArg = lat) {
   const query = await fetch(
-    `${urlBase}${profile}/${lon},${lat}?contours_minutes=${minutes}&polygons=true&access_token=${mapboxgl.accessToken}`,
+    `${urlBase}${profile}/${lonArg},${latArg}?contours_minutes=${minutes}&polygons=true&access_token=${mapboxgl.accessToken}`,
     { method: 'GET' }
   );
   const data = await query.json();
@@ -34,15 +35,12 @@ const marker = new mapboxgl.Marker({
 
 // Create a LngLat object to use in the marker initialization
 // https://docs.mapbox.com/mapbox-gl-js/api/#lnglat
-const lngLat = {
-  lon: lon,
-  lat: lat
-};
+// marker will be positioned using an array [lon, lat]
 // Call the getIso function
 // You will remove this later - it's just here so you can see the console.log results in this step
 map.on('load', () => {
   // Initialize the marker at the query coordinates
-  marker.setLngLat(lngLat).addTo(map);
+  marker.setLngLat([lon, lat]).addTo(map);
   // When the map loads, add the source and layer
   map.addSource('iso', {
     type: 'geojson',
@@ -161,8 +159,19 @@ map.on('load', () => {
       if (info) info.style.display = '';
     }
 
+    // Move the isochrone origin to the clicked museum and update marker
+    const coords = e.features[0].geometry.coordinates;
+    const clickedLon = coords[0];
+    const clickedLat = coords[1];
+    // update globals
+    lon = clickedLon;
+    lat = clickedLat;
+    // move marker
+    marker.setLngLat([clickedLon, clickedLat]).addTo(map);
+    // request a new isochrone for the clicked location
+    getIso(clickedLon, clickedLat);
     // Optional: keep the clicked location visible by easing the map center
-    // map.easeTo({ center: e.lngLat });
+    // map.easeTo({ center: [clickedLon, clickedLat] });
   });
 
   map.on('mouseenter', 'museums-layer', () => {
