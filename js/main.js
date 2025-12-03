@@ -12,9 +12,9 @@ const map = new mapboxgl.Map({
 
 // Create constants to use in getIso()
 const urlBase = 'https://api.mapbox.com/isochrone/v1/mapbox/';
-// UW Seattle Campus coordinates (approximate)
-const lon = -122.3035;
-const lat = 47.6553;
+// UW Seattle Campus coordinates (approximate) — make mutable so clicks can update origin
+let lon = -122.3035;
+let lat = 47.6553;
 let profile = 'cycling'; // Set the default routing profile
 let minutes = 10; // Set the default duration
 
