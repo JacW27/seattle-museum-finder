@@ -5,15 +5,16 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoidm9ydGV4NyIsImEiOiJjbWhkdDc4cDUwNzJnMnRwcnd5Z
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v12',
-  zoom: 11, // starting zoom
-  center: [-122.3328, 47.6061] // starting center
+  zoom: 13, // starting zoom (closer to campus)
+  center: [-122.3035, 47.6553] // starting center (UW Seattle Campus)
   
 });
 
 // Create constants to use in getIso()
 const urlBase = 'https://api.mapbox.com/isochrone/v1/mapbox/';
-const lon = -122.3328;
-const lat = 47.6061;
+// UW Seattle Campus coordinates (approximate)
+const lon = -122.3035;
+const lat = 47.6553;
 let profile = 'cycling'; // Set the default routing profile
 let minutes = 10; // Set the default duration
 
@@ -72,6 +73,8 @@ map.on('load', () => {
   getIso();
 });
 
+// NOTE: runtime sizing override removed — CSS `.map-wrapper` controls the map size now.
+
 // Target the "params" form in the HTML portion of your code
 const params = document.getElementById('params');
 
@@ -112,7 +115,7 @@ map.on('load', () => {
     // EXAMPLE: Add Public_Garages_and_Parking_Lots dataset
   map.addSource('public_garages', {
     type: 'geojson',
-    data: 'assets/Public_Garages_and_Parking_Lots_0.25mi.geojson'  // <-- replace with your dataset path or URL
+    data: 'assets/Public_Garages_and_Parking_Lots_0.25mi.geojson'
   });
 
   map.addLayer({

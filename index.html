@@ -11,8 +11,16 @@
   
   <style>
     html, body { height: 100%; margin: 0; padding: 0; }
-    #map {height: 500px; width: 100%}
-    .info { margin-top: 8px; background: rgba(255,255,255,0.9); padding: 6px 8px; border-radius:4px; font-family: sans-serif; }
+    /* make the map-wrapper fill the viewport below the nav (no runtime overrides) */
+    .map-wrapper { width: 100%; height: calc(100vh - 48px); }
+    /* increased map width to 100% of screen */
+    .page-content.map-full { padding: 0; max-width: 100%; margin: 0; }
+    #map { height: 100%; width: 100%; }
+    .absolute { box-shadow: 0 2px 6px rgba(0,0,0,0.12); background: #fff; border-radius: 6px; }
+    /* Map title overlay */
+    .map-title { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 1250; background: rgba(255,255,255,0.85); padding: 10px 16px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.12); font-family: sans-serif; text-align: center; }
+    .map-title h1 { margin: 0; font-size: 18px; font-weight: 700; }
+    .map-title p { margin: 6px 0 0 0; font-size: 14px; color: #333; }
   </style>
 </head>
 <body>
@@ -22,55 +30,62 @@
     <a href="team.html">Team</a>
   </div>
 
-  <!-- mapbox top-left buttons -->
-  <div class="absolute fl my24 mx24 py24 px24 bg-gray-faint round">
-    <form id="params">
-      <h4 class="txt-m txt-bold mb6">Choose a travel mode:</h4>
-      <div class="mb12 mr12 toggle-group align-center">
-        <label class="toggle-container">
-          <input name="profile" type="radio" value="walking" />
-          <div class="toggle toggle--active-null toggle--null">Walking</div>
-        </label>
-        <label class="toggle-container">
-          <input name="profile" type="radio" value="cycling" checked />
-          <div class="toggle toggle--active-null toggle--null">Cycling</div>
-        </label>
-        <label class="toggle-container">
-          <input name="profile" type="radio" value="driving" />
-          <div class="toggle toggle--active-null toggle--null">Driving</div>
-        </label>
-      </div>
-      <h4 class="txt-m txt-bold mb6">Choose a maximum duration:</h4>
-      <div class="mb12 mr12 toggle-group align-center">
-        <label class="toggle-container">
-          <input name="duration" type="radio" value="10" checked />
-          <div class="toggle toggle--active-null toggle--null">10 min</div>
-        </label>
-        <label class="toggle-container">
-          <input name="duration" type="radio" value="20" />
-          <div class="toggle toggle--active-null toggle--null">20 min</div>
-        </label>
-        <label class="toggle-container">
-          <input name="duration" type="radio" value="30" />
-          <div class="toggle toggle--active-null toggle--null">30 min</div>
-        </label>
-      </div>
-    </form>
-  </div>
+  <!-- mapbox top-left buttons (moved into the map wrapper below so it overlays the map) -->
 
-  <div class="page-content">
-    <h1>Seattle Museum Map</h1>
-    <p>
-      This page displays the basemap used for our Seattle Museum Finder project. Please use the top navigation bar to explore our exciting project!
-    </p>
-    <div id="map"></div>
-    <div class="map-overlay" id="museum-info" style="position:absolute; top:100px; right:40px; z-index:1000; display:block;">
-      <h2>Museum Information</h2>
-      <div id="museum-content">
-        <p>Hover over a museum!</p>
+  <div class="page-content map-full">
+    <!-- Map wrapper: map and overlays are positioned inside so overlays sit on top of the map -->
+    <div class="map-wrapper" style="position:relative; width:100%">
+      <!-- Title overlay placed over the map (moved from page header) -->
+      <div class="map-title">
+        <h1>Seattle Museum Map</h1>
+        <p>This page displays the basemap used for our Seattle Museum Finder project. Please use the top navigation bar to explore our exciting project!</p>
+      </div>
+      <div id="map"></div>
+
+      <!-- isochrone / travel controls: overlayed top-left on map -->
+      <div class="absolute fl my24 mx24 py24 px24 bg-gray-faint round" style="position:absolute; left:12px; top:12px; z-index:1200;">
+        <form id="params">
+          <h4 class="txt-m txt-bold mb6">Choose a travel mode:</h4>
+          <div class="mb12 mr12 toggle-group align-center">
+            <label class="toggle-container">
+              <input name="profile" type="radio" value="walking" />
+              <div class="toggle toggle--active-null toggle--null">Walking</div>
+            </label>
+            <label class="toggle-container">
+              <input name="profile" type="radio" value="cycling" checked />
+              <div class="toggle toggle--active-null toggle--null">Cycling</div>
+            </label>
+            <label class="toggle-container">
+              <input name="profile" type="radio" value="driving" />
+              <div class="toggle toggle--active-null toggle--null">Driving</div>
+            </label>
+          </div>
+          <h4 class="txt-m txt-bold mb6">Choose a maximum duration:</h4>
+          <div class="mb12 mr12 toggle-group align-center">
+            <label class="toggle-container">
+              <input name="duration" type="radio" value="10" checked />
+              <div class="toggle toggle--active-null toggle--null">10 min</div>
+            </label>
+            <label class="toggle-container">
+              <input name="duration" type="radio" value="20" />
+              <div class="toggle toggle--active-null toggle--null">20 min</div>
+            </label>
+            <label class="toggle-container">
+              <input name="duration" type="radio" value="30" />
+              <div class="toggle toggle--active-null toggle--null">30 min</div>
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <!-- museum info overlay (right) - overlayed on the map -->
+      <div class="map-overlay" id="museum-info" style="position:absolute; top:12px; right:12px; z-index:1200; display:block; background:#fff; padding:8px; border-radius:4px; box-shadow:0 2px 6px rgba(0,0,0,0.12);">
+        <h2 style="margin:0 0 6px 0; font-size:16px">Museum Information</h2>
+        <div id="museum-content">
+          <p style="margin:0">Hover over a museum!</p>
+        </div>
       </div>
     </div>
-    <div class="info">Basemap Complete</div>
   </div>
   
 
