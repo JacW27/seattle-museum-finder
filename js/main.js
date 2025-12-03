@@ -34,11 +34,8 @@ const marker = new mapboxgl.Marker({
   color: '#314ccd'
 });
 
-// Create a LngLat object to use in the marker initialization
 // https://docs.mapbox.com/mapbox-gl-js/api/#lnglat
 // marker will be positioned using an array [lon, lat]
-// Call the getIso function
-// You will remove this later - it's just here so you can see the console.log results in this step
 map.on('load', () => {
   // Initialize the marker at the query coordinates
   marker.setLngLat([lon, lat]).addTo(map);
@@ -71,17 +68,14 @@ map.on('load', () => {
   getIso();
 });
 
-// NOTE: runtime sizing override removed — CSS `.map-wrapper` controls the map size now.
-
 // Target the "params" form in the HTML portion of your code
 const params = document.getElementById('params');
-
 // When a user changes the value of profile or duration by clicking a button, change the parameter's value and make the API query again
 params.addEventListener('change', (event) => {
   if (event.target.name === 'profile') {
     profile = event.target.value;
-    } else if (event.target.name === 'duration') {
-      minutes = parseInt(event.target.value, 10) || minutes;
+  } else if (event.target.name === 'duration') {
+    minutes = event.target.value;
   }
   getIso();
 });
@@ -198,12 +192,6 @@ map.on('mousemove', (e) => {
   }
 
   const props = features[0].properties;
-
-  // museum properties you must have:
-  // props.name
-  // props.image
-  // props.address
-  // props.description
 
   let html = `
     <h3>${props.name}</h3>
