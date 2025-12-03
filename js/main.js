@@ -80,8 +80,8 @@ const params = document.getElementById('params');
 params.addEventListener('change', (event) => {
   if (event.target.name === 'profile') {
     profile = event.target.value;
-  } else if (event.target.name === 'duration') {
-    minutes = event.target.value;
+    } else if (event.target.name === 'duration') {
+      minutes = parseInt(event.target.value, 10) || minutes;
   }
   getIso();
 });
