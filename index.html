@@ -7,6 +7,8 @@
   <link rel="icon" type="image/x-icon" href="/img/favicon.png">
   <link href="https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css" rel="stylesheet"/>
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <!-- Mapbox Directions plugin CSS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css">
   
   <style>
@@ -17,7 +19,7 @@
     #map { height: 100%; width: 100%; }
     .absolute { box-shadow: 0 2px 6px rgba(0,0,0,0.12); background: #fff; border-radius: 6px; }
     /* Map title overlay */
-    .map-title { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 1250; background: rgba(255,255,255,0.85); padding: 10px 16px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.12); font-family: sans-serif; text-align: center; }
+    .map-title { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 1250; background: rgba(255,255,255,0.85); padding: 10px 16px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.12); font-family: sans-serif; text-align: center; }
     .map-title h1 { margin: 0; font-size: 18px; font-weight: 700; }
     .map-title p { margin: 6px 0 0 0; font-size: 12px; color: #333; }
   </style>
@@ -42,7 +44,7 @@
       <div id="map"></div>
 
       <!-- isochrone / travel controls: overlayed top-left on map -->
-      <div class="absolute fl my24 mx24 py24 px24 bg-gray-faint round" style="position:absolute; left:12px; top:12px; z-index:1200;">
+      <div class="absolute fl my24 mx24 py24 px24 bg-gray-faint round" style="position:absolute; right:12px; bottom:12px; z-index:1200;">
         <form id="params">
           <h4 class="txt-m txt-bold mb6">Choose a travel mode:</h4>
           <div class="mb12 mr12 toggle-group align-center">
@@ -78,16 +80,23 @@
       </div>
 
       <!-- museum info overlay (right) - overlayed on the map -->
-      <div class="map-overlay" id="museum-info" style="position:absolute; top:12px; right:12px; z-index:1200; display:block; background:#fff; padding:8px; border-radius:4px; box-shadow:0 2px 6px rgba(0,0,0,0.12);">
+      <div class="map-overlay" id="museum-info" style="position:absolute; top:20px; right:12px; z-index:1200; display:block; background:#fff; padding:8px; border-radius:4px; box-shadow:0 2px 6px rgba(0,0,0,0.12);">
         <h2 style="margin:0 0 6px 0; font-size:16px">Museum Information</h2>
         <div id="museum-content">
           <p style="margin:0">Hover over a museum!</p>
         </div>
       </div>
+      <!-- Legend overlay -->
+      <div id="map-legend" style="position:absolute; left:12px; bottom:12px; z-index:1250; background: rgba(255,255,255,0.9); padding:8px 10px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.12); font-family: sans-serif; font-size:13px;">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;"><span style="display:inline-block;width:12px;height:12px;border-radius:6px;background:#ff5500;border:1px solid rgba(0,0,0,0.15);"></span> Museums</div>
+        <div style="display:flex; align-items:center; gap:8px;"><span style="display:inline-block;width:12px;height:12px;border-radius:6px;background:rgba(0,42,255,1);border:1px solid rgba(0,0,0,0.15);"></span> Parking / Garages</div>
+      </div>
     </div>
   </div>
 
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <!-- Mapbox Directions plugin JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

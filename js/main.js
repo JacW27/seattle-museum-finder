@@ -1,14 +1,30 @@
 // 1. Set your Mapbox access token
-mapboxgl.accessToken = 'pk.eyJ1Ijoidm9ydGV4NyIsImEiOiJjbWhkdDc4cDUwNzJnMnRwcnd5Z21oYzJiIn0.H1LmCQc2KJuXvjfBiJQlaw';
+mapboxgl.accessToken = 'pk.eyJ1Ijoia2FpYmEyayIsImEiOiJjbWh0aXlybGowb3VvMmxvanBhaDB6YThlIn0.bbZi9GXBCsrDH2M4bUWFMQ';
 
 // 2. Create the map
 const map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/streets-v12',
+  style: 'mapbox://styles/kaiba2k/cmidh7iz4006w01sv5ccb81rj',
   zoom: 13, // starting zoom (closer to campus)
   center: [-122.3035, 47.6553] // starting center (UW Seattle Campus)
   
 });
+
+// Directions control: will allow users to route to selected museums
+// Keep a fixed origin for routing (UW Seattle Campus) so users route from campus
+const ROUTE_ORIGIN = [-122.3035, 47.6553];
+let directions;
+// instantiate directions control after map creation
+if (typeof MapboxDirections !== 'undefined') {
+  directions = new MapboxDirections({
+    accessToken: mapboxgl.accessToken,
+    unit: 'imperial',
+    profile: 'mapbox/driving',
+    alternatives: false,
+    controls: { instructions: true }
+  });
+  map.addControl(directions, 'top-left');
+}
 
 // Create constants to use in getIso()
 const urlBase = 'https://api.mapbox.com/isochrone/v1/mapbox/';
@@ -122,6 +138,16 @@ map.on('load', () => {
     }
   });
 
+  // Ensure the isochrone fill is rendered beneath the point layers so markers are visible
+  try {
+    if (map.getLayer('isoLayer') && map.getLayer('public_garages-layer')) {
+      map.moveLayer('isoLayer', 'public_garages-layer');
+    }
+  } catch (err) {
+    // ignore if layers not found yet
+    console.warn('Could not move isoLayer:', err);
+  }
+
   // On click: write museum details to the external sidebar (`#museum-content`) instead of a popup
   map.on('click', 'museums-layer', (e) => {
     if (!e.features || !e.features.length) return;
@@ -167,6 +193,15 @@ map.on('load', () => {
     marker.setLngLat([clickedLon, clickedLat]).addTo(map);
     // request a new isochrone for the clicked location
     getIso(clickedLon, clickedLat);
+    // If directions control is available, set origin to the campus and destination to clicked museum
+    if (typeof directions !== 'undefined') {
+      try {
+        directions.setOrigin(ROUTE_ORIGIN);
+        directions.setDestination([clickedLon, clickedLat]);
+      } catch (err) {
+        console.warn('Directions control error:', err);
+      }
+    }
     // Optional: keep the clicked location visible by easing the map center
     // map.easeTo({ center: [clickedLon, clickedLat] });
   });
