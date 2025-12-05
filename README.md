@@ -4,7 +4,7 @@
 *The Seattle Museum Finder is an interactive Web GIS application created to assist users in exploring major museums throughout Seattle and the greater Puget Sound area. Our platform consolidates the locations of museums, key details about them, and information on nearby public parking into a single, easy-to-use map interface. With integrated geospatial visualization and distance-based queries, it will be easy for users to identify museums nearest to the University of Washington or any area of interest. The project emphasizes usability, accessibility, and clarity to enable UW students and visitors alike to move efficiently around local cultural destinations. Curated data sets, spatial tools facilitated by Mapbox, and intuitive design combine in this application to offer an interactive way of discovering Seattle's rich museum landscape.*
 
 ## Favicon
-![Map pin with museum in center](/img/favicon.png)
+<img src="/img/favicon.png" alt="Map pin with museum in center" style="width:20%; height: auto;">
 
 ## Project Goal
 *The purpose of the project is to create a seamless and intuitive map-based user interface that improves how Seattle's museum attractions are explored while providing real-world trip planning. By making discovery more accessible-by consolidating essential information with functional features such as distance sorting and nearby parking availability, we expect users to reduce scattered searches on multiple websites and offer users a single centralized, geospatially rich platform. The application is envisioned for UW students, campus visitors, and museum enthusiasts who look forward to cultural engagement and easy planning of short visits or longer outings. Ultimately, the project aims at meaningfully enhancing the experience of going to museums through interactive, location-aware design.*
@@ -16,9 +16,9 @@
 *Screenshots*
 
 ## Main Functions
-- *Function 1*
-- *Function 2*
-- *Function 3*
+- The map allows you to see point data on both museums and parking/garages nearby. 
+- All data can be filtered based on travel time and mode of travel. This not only limits the amount of points on the user's screen, but also outlines the area in which our program is accounting for.
+- The user can select a start and end point to receive a route, directions, and estimated commute time from Point A to Point B. While the application is designed for locating museums and nearby parking, the user can select any location on the map.
 
 ## Data Sources
 - **Seattle Museums (custom GeoJSON)**  
