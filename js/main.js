@@ -324,9 +324,9 @@ map.on('load', () => {
     let popupHtml = '<strong>Garage</strong>';
     if (feat.properties) {
       const p = feat.properties;
-      if (p.OP_NAME) popupHtml = `<strong>${p.OP_NAME}</strong>`;
-      else if (p.WEBNAME) popupHtml = `<strong>${p.WEBNAME}</strong>`;
-      if (p.ADDRESS) popupHtml += `<div>${p.ADDRESS}</div>`;
+      if (p.FAC_NAME) popupHtml = `<strong>${p.FAC_NAME}</strong>`;
+      if (p.DEA_FACILITY_ADDRESS) popupHtml += `<div>${p.DEA_FACILITY_ADDRESS}</div>`;
+      if (p.DEA_STALLS) popupHtml += `<div>Spots: ${p.DEA_STALLS}</div>`;
     }
     new mapboxgl.Popup({ offset: 12 }).setLngLat([destLon, destLat]).setHTML(popupHtml).addTo(map);
   });
@@ -365,4 +365,3 @@ map.on('mousemove', (e) => {
 
   document.getElementById('museum-content').innerHTML = html;
 });
-
