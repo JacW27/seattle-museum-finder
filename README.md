@@ -39,4 +39,13 @@
 *We first would like to thank Professor Bo Zhao for the guidance, expertise, and inspiring teaching throughout the quarter. His clear explanation and practical demonstration greatly reinforced our understanding of Web GIS development. We also would like to thank Hudson Dougan, our TA, for his constant support during labs, and being always ready to help us troubleshoot technical issues. Lastly, thanks go to Se Chang Kim, our grader, for providing helpful remarks that really allowed us to improve our work and our application as well. Their joint effort made it possible for our group to successfully design, build, and complete the Seattle Museum Finder project.*
 
 ## AI Use Disclosure
-*AI Use Disclosure*
+In this assignment, AI was used for structuring as well as debugging.  
+
+**Structuring**
+- Created a geojson template for the *museums.geojson* file. This gave us a starting point as we manually added coordinate, name and other data into the file.
+-  
+
+
+**Debugging**
+- AI was used to debug the isochrone api section that allows the map to move when the user clicks on a location.
+- 
