@@ -15,6 +15,8 @@ const map = new mapboxgl.Map({
 // Keep a fixed origin for routing (UW Seattle Campus) so users route from campus
 const ROUTE_ORIGIN = [-122.3035, 47.6553];
 let directions;
+// current origin used for isochrone center; initialize to the campus origin
+let CURRENT_ORIGIN = ROUTE_ORIGIN.slice();
 // instantiate directions control after map creation
 if (typeof MapboxDirections !== 'undefined') {
   directions = new MapboxDirections({
@@ -61,11 +63,39 @@ if (typeof MapboxDirections !== 'undefined') {
       }
       // also listen to events emitted by the plugin if available
       if (directions && typeof directions.on === 'function') {
-        try { directions.on('origin', () => {}); } catch (e) {}
-        try { directions.on('clear', () => {}); } catch (e) {}
+        try {
+          directions.on('origin', () => {
+            // When the origin is changed in the Directions UI, update the CURRENT_ORIGIN,
+            // move the marker, and refresh the isochrone centered on the new origin.
+            try {
+              const o = directions.getOrigin && directions.getOrigin();
+              if (!o) return;
+              let coords = null;
+              if (Array.isArray(o) && o.length >= 2) coords = [o[0], o[1]];
+              else if (o.geometry && Array.isArray(o.geometry.coordinates)) coords = [o.geometry.coordinates[0], o.geometry.coordinates[1]];
+              else if (o.lng && o.lat) coords = [o.lng, o.lat];
+              if (coords) {
+                CURRENT_ORIGIN = coords.slice();
+                marker.setLngLat(CURRENT_ORIGIN).addTo(map);
+                // refresh isochrone for the new origin
+                getIso(CURRENT_ORIGIN[0], CURRENT_ORIGIN[1]);
+              }
+            } catch (err) {
+              // ignore
+            }
+          });
+        } catch (e) {}
+        try {
+          directions.on('clear', () => {
+            // If the directions are cleared, reset current origin to campus and refresh
+            CURRENT_ORIGIN = ROUTE_ORIGIN.slice();
+            marker.setLngLat(CURRENT_ORIGIN).addTo(map);
+            getIso(CURRENT_ORIGIN[0], CURRENT_ORIGIN[1]);
+          });
+        } catch (e) {}
       }
     } catch (e) {
-      // silent
+      // ignore
     }
   }, 500);
 }
@@ -73,14 +103,14 @@ if (typeof MapboxDirections !== 'undefined') {
 // Create constants to use in getIso()
 const urlBase = 'https://api.mapbox.com/isochrone/v1/mapbox/';
 // UW Seattle Campus coordinates (approximate) — make mutable so clicks can update origin
-let lon = -122.3035;
-let lat = 47.6553;
+let lon = ROUTE_ORIGIN[0];
+let lat = ROUTE_ORIGIN[1];
 let profile = 'cycling'; // Set the default routing profile
 let minutes = 10; // Set the default duration
 
 // Create a function that sets up the Isochrone API query then makes an fetch call
 // getIso: fetch isochrone for a given lon/lat (defaults to current `lon`/`lat`)
-async function getIso(lonArg = lon, latArg = lat) {
+async function getIso(lonArg = CURRENT_ORIGIN[0], latArg = CURRENT_ORIGIN[1]) {
   const query = await fetch(
     `${urlBase}${profile}/${lonArg},${latArg}?contours_minutes=${minutes}&polygons=true&access_token=${mapboxgl.accessToken}`,
     { method: 'GET' }
@@ -97,8 +127,8 @@ const marker = new mapboxgl.Marker({
 // https://docs.mapbox.com/mapbox-gl-js/api/#lnglat
 // marker will be positioned using an array [lon, lat]
 map.on('load', () => {
-  // Initialize the marker at the query coordinates
-  marker.setLngLat([lon, lat]).addTo(map);
+  // Initialize the marker at the current origin
+  marker.setLngLat([CURRENT_ORIGIN[0], CURRENT_ORIGIN[1]]).addTo(map);
   // When the map loads, add the source and layer
   map.addSource('iso', {
     type: 'geojson',
@@ -226,23 +256,20 @@ map.on('load', () => {
       if (info) info.style.display = '';
     }
 
-    // Move the isochrone origin to the clicked museum and update marker
+    // Get clicked museum coordinates (we do NOT change isochrone origin here)
     const coords = e.features[0].geometry.coordinates;
     const clickedLon = coords[0];
     const clickedLat = coords[1];
-    // update globals
-    lon = clickedLon;
-    lat = clickedLat;
-    // move marker
-    marker.setLngLat([clickedLon, clickedLat]).addTo(map);
-    // request a new isochrone for the clicked location
-    getIso(clickedLon, clickedLat);
     // If directions control is available, set destination to clicked museum.
     // Only overwrite the origin if it currently equals the default ROUTE_ORIGIN (i.e. the user hasn't entered a custom origin).
     if (typeof directions !== 'undefined') {
       try {
         if (originEqualsRouteOrigin()) {
           directions.setOrigin(ROUTE_ORIGIN);
+          // also ensure CURRENT_ORIGIN is set to ROUTE_ORIGIN when we programmatically set it
+          CURRENT_ORIGIN = ROUTE_ORIGIN.slice();
+          marker.setLngLat([CURRENT_ORIGIN[0], CURRENT_ORIGIN[1]]).addTo(map);
+          getIso(CURRENT_ORIGIN[0], CURRENT_ORIGIN[1]);
         }
         directions.setDestination([clickedLon, clickedLat]);
       } catch (err) {
@@ -259,6 +286,53 @@ map.on('load', () => {
   map.on('mouseleave', 'museums-layer', () => {
     map.getCanvas().style.cursor = '';
   });
+
+  // Make garages clickable: set directions destination to clicked garage and show a popup
+  map.on('click', 'public_garages-layer', (e) => {
+    if (!e.features || !e.features.length) return;
+    const feat = e.features[0];
+    const coords = feat.geometry.coordinates;
+    const destLon = coords[0];
+    const destLat = coords[1];
+
+    // Update Directions destination without overwriting a user-entered origin
+    if (typeof directions !== 'undefined') {
+      try {
+        // determine whether current origin equals default campus origin
+        let originIsCampus = false;
+        try {
+          const o = directions.getOrigin && directions.getOrigin();
+          if (o) {
+            let oc = null;
+            if (Array.isArray(o) && o.length >= 2) oc = o;
+            else if (o.geometry && Array.isArray(o.geometry.coordinates)) oc = o.geometry.coordinates;
+            else if (o.lng && o.lat) oc = [o.lng, o.lat];
+            if (oc) {
+              originIsCampus = Math.abs(oc[0] - ROUTE_ORIGIN[0]) < 1e-6 && Math.abs(oc[1] - ROUTE_ORIGIN[1]) < 1e-6;
+            }
+          }
+        } catch (e) {}
+
+        if (originIsCampus) directions.setOrigin(ROUTE_ORIGIN);
+        directions.setDestination([destLon, destLat]);
+      } catch (err) {
+        console.warn('Directions control error (garage):', err);
+      }
+    }
+
+    // Small popup with basic garage info (if available)
+    let popupHtml = '<strong>Garage</strong>';
+    if (feat.properties) {
+      const p = feat.properties;
+      if (p.OP_NAME) popupHtml = `<strong>${p.OP_NAME}</strong>`;
+      else if (p.WEBNAME) popupHtml = `<strong>${p.WEBNAME}</strong>`;
+      if (p.ADDRESS) popupHtml += `<div>${p.ADDRESS}</div>`;
+    }
+    new mapboxgl.Popup({ offset: 12 }).setLngLat([destLon, destLat]).setHTML(popupHtml).addTo(map);
+  });
+
+  map.on('mouseenter', 'public_garages-layer', () => { map.getCanvas().style.cursor = 'pointer'; });
+  map.on('mouseleave', 'public_garages-layer', () => { map.getCanvas().style.cursor = ''; });
 
 });
 
