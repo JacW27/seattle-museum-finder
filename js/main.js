@@ -1,9 +1,10 @@
-// 1. Set your Mapbox access token
+// 1. Setting up the access token for MapBox GL JS
 mapboxgl.accessToken = 'pk.eyJ1Ijoia2FpYmEyayIsImEiOiJjbWh0aXlybGowb3VvMmxvanBhaDB6YThlIn0.bbZi9GXBCsrDH2M4bUWFMQ';
 
 // 2. Create the map
 const map = new mapboxgl.Map({
   container: 'map',
+  // Style URL for Kai's Custom Basemap
   style: 'mapbox://styles/kaiba2k/cmidh7iz4006w01sv5ccb81rj',
   zoom: 13, // starting zoom (closer to campus)
   center: [-122.3035, 47.6553] // starting center (UW Seattle Campus)
@@ -24,6 +25,49 @@ if (typeof MapboxDirections !== 'undefined') {
     controls: { instructions: true }
   });
   map.addControl(directions, 'top-left');
+
+  // Helper: check whether the directions origin is equal to our default ROUTE_ORIGIN
+  function originEqualsRouteOrigin() {
+    try {
+      if (!directions || typeof directions.getOrigin !== 'function') return false;
+      const o = directions.getOrigin();
+      if (!o) return false;
+      // `o` may be a Feature-like object or an array; extract coordinates robustly
+      let coords = null;
+      if (Array.isArray(o) && o.length >= 2) coords = o;
+      else if (o.geometry && Array.isArray(o.geometry.coordinates)) coords = o.geometry.coordinates;
+      else if (o.lng && o.lat) coords = [o.lng, o.lat];
+      if (!coords) return false;
+      return Math.abs(coords[0] - ROUTE_ORIGIN[0]) < 1e-6 && Math.abs(coords[1] - ROUTE_ORIGIN[1]) < 1e-6;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  // Try to detect when the user edits the origin input so we won't overwrite it later.
+  // The Directions control builds inputs asynchronously; attach listeners after a short delay.
+  setTimeout(() => {
+    try {
+      // common class names used by the plugin — attach to any matching inputs
+      const originInput = document.querySelector('.mapbox-directions-origin input, .mapbox-directions__origin input, .mapbox-directions-origin');
+      if (originInput) {
+        const inputEl = originInput.tagName === 'INPUT' ? originInput : originInput.querySelector('input');
+        if (inputEl) {
+          inputEl.addEventListener('input', () => {
+            // no-op; the check uses directions.getOrigin() when deciding to overwrite
+          });
+          inputEl.addEventListener('change', () => {});
+        }
+      }
+      // also listen to events emitted by the plugin if available
+      if (directions && typeof directions.on === 'function') {
+        try { directions.on('origin', () => {}); } catch (e) {}
+        try { directions.on('clear', () => {}); } catch (e) {}
+      }
+    } catch (e) {
+      // silent
+    }
+  }, 500);
 }
 
 // Create constants to use in getIso()
@@ -193,10 +237,13 @@ map.on('load', () => {
     marker.setLngLat([clickedLon, clickedLat]).addTo(map);
     // request a new isochrone for the clicked location
     getIso(clickedLon, clickedLat);
-    // If directions control is available, set origin to the campus and destination to clicked museum
+    // If directions control is available, set destination to clicked museum.
+    // Only overwrite the origin if it currently equals the default ROUTE_ORIGIN (i.e. the user hasn't entered a custom origin).
     if (typeof directions !== 'undefined') {
       try {
-        directions.setOrigin(ROUTE_ORIGIN);
+        if (originEqualsRouteOrigin()) {
+          directions.setOrigin(ROUTE_ORIGIN);
+        }
         directions.setDestination([clickedLon, clickedLat]);
       } catch (err) {
         console.warn('Directions control error:', err);
