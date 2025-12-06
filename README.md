@@ -1,13 +1,13 @@
 # Seattle Museum Finder
 
 ## Project Description
-*The Seattle Museum Finder is an interactive Web GIS application created to assist users in exploring major museums throughout Seattle and the greater Puget Sound area. Our platform consolidates the locations of museums, key details about them, and information on nearby public parking into a single, easy-to-use map interface. With integrated geospatial visualization and distance-based queries, it will be easy for users to identify museums nearest to the University of Washington or any area of interest. The project emphasizes usability, accessibility, and clarity to enable UW students and visitors alike to move efficiently around local cultural destinations. Curated data sets, spatial tools facilitated by Mapbox, and intuitive design combine in this application to offer an interactive way of discovering Seattle's rich museum landscape.*
+*The Seattle Museum Finder is an interactive Web GIS application designed to assist in exploring major museums throughout Seattle and the greater Puget Sound area. Our platform gathers museum locations, along with key details about mueseums and nearby public parking into one easy-to-use map interface. Integrating geospatial visualization and distance-based queries enable users to easily find which museums are closest to the University of Washington or any other area of interest (by manually adjusting the start point). The main focus of this project is usability, accessibility, and clarity to enable UW students and a wider range of visitors to navigate efficiently around local cultural hotspots. Curated data sets, spatial tools facilitated by Mapbox, and intuitive design combine in this application to offer an interactive way of discovering Seattle's rich museum landscape.*
 
 ## Favicon
 <img src="/img/favicon.png" alt="Map pin with museum in center" style="width:20%; height: auto;">
 
 ## Project Goal
-*The purpose of the project is to create a seamless and intuitive map-based user interface that improves how Seattle's museum attractions are explored while providing real-world trip planning. By making discovery more accessible-by consolidating essential information with functional features such as distance sorting and nearby parking availability, we expect users to reduce scattered searches on multiple websites and offer users a single centralized, geospatially rich platform. The application is envisioned for UW students, campus visitors, and museum enthusiasts who look forward to cultural engagement and easy planning of short visits or longer outings. Ultimately, the project aims at meaningfully enhancing the experience of going to museums through interactive, location-aware design.*
+*The objective of this project is to develop an intuitive map-based user interface that will enhance not only the way museum attractions in Seattle explored, but also provide real-world trip planning. By making discovery more accessible and providing essential information with functional features, like distance sorting and available parking nearby, we anticipate users will reduce scattered searches across multiple websites and offer users a single, rich, centralized geospatial platform. The target audience is UW students, Seattle visitors, and any museum enthusiasts who want cultural engagement and straightforward navigation planning. Ultimately, the project aims to find an efficient way to enhance the experience of visiting museums through interactive, location-aware design.*
 
 ## Application URL
 *[Click here: Web App Link](https://jacw27.github.io/seattle-museum-finder/)*
@@ -43,9 +43,9 @@ In this assignment, AI was used for structuring as well as debugging.
 
 **Structuring**
 - Created a geojson template for the *museums.geojson* file. This gave us a starting point as we manually added coordinate, name and other data into the file.
--  
+-  Helped us to structure the on-click events for parking garages. This ensured that the garage would turn into the routing destination on the map after clicks.
 
 
 **Debugging**
 - AI was used to debug the isochrone api section that allows the map to move when the user clicks on a location.
-- 
+- AI was used to debug the isochrone distance starting point to match the routing starting point.
