@@ -20,7 +20,7 @@
 ## Other Features
 **Hover Feature**
 <div>
-<img src="/img/hover.gif" alt="Mouse moving over orange points on a map, displaying pop-up with different museum data based on which point it is on" style="width:120%; height: auto;">
+<img src="/img/hover.gif" alt="Mouse moving over orange points on a map, displaying pop-up with different museum data based on which point it is on" style="width:75%; height: auto;">
 
 The user can hover over museum points (the orange ones) to get a brief look at some of the museum's details. It allows the user to see the museum name, a picture of it, its address, and its hours. 
 
