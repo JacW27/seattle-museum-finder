@@ -18,19 +18,27 @@
 - The user can select a start and end point to receive a route, directions, and estimated commute time from Point A to Point B. While the application is designed for locating museums and nearby parking, the user can select any location on the map.
 
 ## Other Features
-<img src="/img/hover-feature.gif" alt="Mouse moving over orange points on a map, displaying pop-up with different museum data based on which point it is on" style="width:20%; height: auto;">
+**Hover Feature**
+<div>
+<img src="/img/hover.gif" alt="Mouse moving over orange points on a map, displaying pop-up with different museum data based on which point it is on" style="width:120%; height: auto;">
 
 The user can hover over museum points (the orange ones) to get a brief look at some of the museum's details. It allows the user to see the museum name, a picture of it, its address, and its hours. 
 
-<img src="/img/parking-pop-up.png" alt="Map with pop-up over blue point, giving parking lot name, address, and number of spots" style="width:20%; height: auto;">
+**Parking Pop-up**
+<div>
+<img src="/img/parking-pop-up.png" alt="Map with pop-up over blue point, giving parking lot name, address, and number of spots" style="width:75%; height: auto;">
 
 When the user clicks on the parking points (the blue ones), they get a pop-up displaying the garage or lot's name, address, and the number of spots it hosts. 
 
-<img src="/img/mode-duration.gif" alt="Map with shaded area that is changing based on the user-selected mode of travel and desired travel time" style="width:20%; height: auto;">
+**Isochrone Shift**
+<div>
+<img src="/img/mode-duration.gif" alt="Map with shaded area that is changing based on the user-selected mode of travel and desired travel time" style="width:75%; height: auto;">
 
 The map display includes an isochrone, visually demonstrating the area that can be traveled within a certain amount of time. The user can select their mode of travel-- walking, cycling, or driving-- as well as their desired travel time-- 5 minutes, 10 minutes, or 15 minutes. This helps the user to limit their search to their own transportation needs.
 
-<img src="/img/directions.png" alt="Map showing walking route from the Space Needle to the Museum of Pop Culture, as well as step-by-step directions and estimated travel time of 2 minutes" style="width:20%; height: auto;">
+**Directions**
+<div>
+<img src="/img/directions.png" alt="Map showing walking route from the Space Needle to the Museum of Pop Culture, as well as step-by-step directions and estimated travel time of 2 minutes" style="width:75%; height: auto;">
 
 The user can select or search two points to receive a plotted route, as well as step-by-step directions. The directions include the distance to travel, as well as the estimated travel time based on the selected mode of travel.
 
@@ -48,7 +56,6 @@ The user can select or search two points to receive a plotted route, as well as 
 ## Applied Libraries & Web Services
 - *Mapbox GL JS*
 - *GitHub Pages*
-- *Any other frameworks or services used*
 
 ## Acknowledgments
 *We first would like to thank Professor Bo Zhao for the guidance, expertise, and inspiring teaching throughout the quarter. His clear explanation and practical demonstration greatly reinforced our understanding of Web GIS development. We also would like to thank Hudson Dougan, our TA, for his constant support during labs, and being always ready to help us troubleshoot technical issues. Lastly, thanks go to Se Chang Kim, our grader, for providing helpful remarks that really allowed us to improve our work and our application as well. Their joint effort made it possible for our group to successfully design, build, and complete the Seattle Museum Finder project.*
